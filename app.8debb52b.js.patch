@@ -1,0 +1,46 @@
+--- app.8debb52b.js.orig	2023-04-17 20:59:12.295445528 -0500
++++ app.8debb52b.js	2023-04-17 20:59:33.867540445 -0500
+@@ -1667,11 +1667,7 @@
+     // Status topics
+     //
+     'hestia/local/temperature': function hestiaLocalTemperature(message) {
+-      if (store.state.info.tempunit === 'C') {
+-        store.state.currentTemperature = message;
+-      } else {
+-        store.state.currentTemperature = parseInt(message);
+-      }
++      store.state.currentTemperature = message;
+     },
+     'hestia/local/maxtempsetpoint': function hestiaLocalMaxtempsetpoint(message) {
+       store.state.modes.cool.setValue = parseFloat(message);
+@@ -1680,10 +1676,10 @@
+       store.state.modes.heat.setValue = parseFloat(message);
+     },
+     'hestia/local/humidity': function hestiaLocalHumidity(message) {
+-      store.state.currentHumidity = parseInt(message);
++      store.state.currentHumidity = message;
+     },
+     'hestia/local/humisetpoint': function hestiaLocalHumisetpoint(message) {
+-      store.state.modes.humidity.setValue = parseInt(message);
++      store.state.modes.humidity.setValue = message;
+     },
+     'hestia/local/pressure': function hestiaLocalPressure(message) {
+       store.state.currentPressure = message;
+@@ -1722,8 +1718,8 @@
+         store.state.modes.heat.stepSize = 0.5;
+         store.state.modes.cool.stepSize = 0.5;
+       } else {
+-        store.state.modes.heat.stepSize = 1;
+-        store.state.modes.cool.stepSize = 1;
++        store.state.modes.heat.stepSize = 0.5;
++        store.state.modes.cool.stepSize = 0.5;
+       }
+     },
+     'hestia/local/systemtype': function hestiaLocalSystemtype(message) {
+@@ -2099,4 +2095,4 @@
+ /***/ })
+ 
+ /******/ });
+-//# sourceMappingURL=app.8debb52b.js.map
+\ No newline at end of file
++//# sourceMappingURL=app.8debb52b.js.map

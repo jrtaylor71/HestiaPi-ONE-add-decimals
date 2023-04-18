@@ -1,0 +1,11 @@
+--- hestia-touch-openhab/home/pi/scripts/bme280F.py	2023-02-02 09:21:23.833989557 -0600
++++ bme280F.py	2023-04-17 20:40:51.534565899 -0500
+@@ -173,7 +173,7 @@
+   temperature,pressure,humidity = readBME280All()
+ 
+ #  print "Temperature : ", temperature, "C"
+-  print "Temperature : ", int((temperature*1.8)+32), "F"
++  print "Temperature : ", round(((temperature*1.8)+32),1), "F"
+   print "Pressure : ", pressure, "hPa"
+   print "Humidity : ", humidity, "%"
+ 

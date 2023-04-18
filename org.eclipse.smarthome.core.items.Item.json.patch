@@ -1,0 +1,11 @@
+--- hestia-touch-openhab/var/lib/openhab2/jsondb/org.eclipse.smarthome.core.items.Item.json	2023-02-02 09:21:23.853989640 -0600
++++ org.eclipse.smarthome.core.items.Item.json	2023-04-17 20:44:44.535608906 -0500
+@@ -659,7 +659,7 @@
+       ],
+       "itemType": "Number",
+       "tags": [],
+-      "label": "Temperature [%.0f °F]",
++      "label": "Temperature [%.1f °F]",
+       "category": "temperature"
+     }
+   },
