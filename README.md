@@ -1,7 +1,9 @@
 # HestiaPi-ONE-add-decimals
 These patch files add decimal points to temperature and humidity.
 
-Copy files to /home/pi
+Clone or download zip/extract files to /home/pi
+
+cd /HestiaPi-ONE-add-decimals or what ever dir you extracted to
 
 chmod +x decimal-patch.sh
 
